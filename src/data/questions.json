@@ -1,0 +1,288 @@
+[
+  {
+    "id": 1,
+    "text": "Sarah is developing a multiplication game. The rules of the game are:\n- The player is asked 5 multiplication questions.\n- Each question asks the player to multiply two random whole numbers between 2 and 12 inclusive.\n- If the player gets the correct answer, 2 points are added to their score.\n\nAt the end of the game, their total score is displayed.\n\nWrite an algorithm to play Sarah's multiplication game based on the given rules.",
+    "difficulty": "Hard",
+    "marks": 6,
+    "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write in OCR Exam Reference Language, Python, or general pseudocode\n2. For OCR Exam Reference Language specifically:\n   - Verify syntax matches the specification\n   - Check for proper use of control structures (if-then-else, loops)\n   - Validate correct usage of operators and built-in functions\n   - Ensure variable declarations and assignments follow the format\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nIMPORTANT MARKING REQUIREMENTS:\n- Each element must be explicitly present in the code to receive marks\n- For output/print statements, they must exist in the correct scope\n- For loops, check that required statements are within the loop\n- For score output, verify it appears AFTER the loop completes\n\nMARKING CRITERIA (1 mark each, no partial marks):\n1.1 Score initialization: Must initialize score to zero BEFORE any loop\n1.2 Random numbers: Must generate BOTH num1 AND num2 between 2-12 inclusive (0 marks if only one number)\n1.3 User input: Must have input statement for user's answer with appropriate prompt\n1.4 Answer checking: Must compare user's answer with num1 * num2\n1.5 Score update: Must add 2 to score for correct answers\n1.6 Final output: Must display final score after the loop ends\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1 through 1.6),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+    "initialCode": "# Your code here\n",
+    "markingPoints": [
+      {
+        "id": "1.1",
+        "description": "Initializes/declares score (to zero) before use, outside of any loop",
+        "marks": 1,
+        "required": ["score = 0", "score := 0"]
+      },
+      {
+        "id": "1.2",
+        "description": "Generates 2 random numbers between 2 and 12 (inclusive)",
+        "marks": 1,
+        "required": ["random", "randint", "Random"]
+      },
+      {
+        "id": "1.3",
+        "description": "Inputs answer from user, displaying multiplication question",
+        "marks": 1,
+        "required": ["input", "INPUT"]
+      },
+      {
+        "id": "1.4",
+        "description": "Checks if input is correct answer",
+        "marks": 1,
+        "required": ["if", "IF"]
+      },
+      {
+        "id": "1.5",
+        "description": "If correct, adds 2 to score",
+        "marks": 1,
+        "required": ["score += 2", "score = score + 2"]
+      },
+      {
+        "id": "1.6",
+        "description": "Output calculated total and date in message",
+        "marks": 1,
+        "required": [
+          ["print", "total"],
+          ["print", "date"]
+        ],
+        "scope": "output",
+        "feedback": "Award mark if code attempts to output both the total duration and date in any format",
+        "alternatives": [
+          ["PRINT", "OUTPUT"],
+          ["output", "OUTPUT"]
+        ]
+      }
+    ],
+    "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: Sarah is developing a multiplication game. The rules of the game are:\nThe player is asked 5 multiplication questions. Each question asks the player to multiply two random whole numbers between 2 and 12 inclusive\nIf the player gets the correct answer, 2 points are added to their score.\nAt the end of the game, their total score is displayed.\n\nWrite an algorithm to play Sarah's multiplication game based on the given rules.\n\nMarks: 6 marks total\n\nMarking Instructions:\n1. Check the Answer for the following elements:\n   • Initializes/declares score (to zero) before use, outside of any loop\n   • Generates 2 random numbers between 2 and 12 (inclusive), or manually sets values\n   • Inputs answer from user, displaying suitable multiplication question\n   • Checks if input is correct answer\n   • If correct, adds 2 to score\n   • Repeats steps 2 to 5 five times\n   • Outputs final score after a reasonable attempt at counting questions\n\n2. Award Marks:\n   • Award 1 mark for each element present, up to a maximum of 6 marks\n\n3. Important Notes:\n   • No need to cast data to string/integer\n   • If random numbers are chosen, questions must use these\n   • Step 6 can be a loop repeating 5 times or the same code written out 5 times\n   • New values must be picked for each question\n   • Do not penalize potential off-by-one errors for looping or random number generation\n   • The order of elements may vary\n   • Extra features are acceptable if required elements are present\n   • Algorithm can be in pseudocode, flowchart, or a programming language\n   • Award marks for correct logic even if syntax is imperfect\n   • If more than 6 elements are present, award marks for the best 6\n\nFinal Scoring:\nTotal marks: 0 to 6 marks based on the criteria above.\n\nExplanation to Student:\nClearly state how many marks were awarded and why. Explain which elements of the algorithm were present and correct, and which were missing or incorrect if full marks were not given.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+  },
+{
+  "id": 2,
+  "text": "Write pseudocode to increment the value held in a variable named score by one.",
+  "difficulty": "Easy",
+  "marks": 1,
+  "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write in OCR Exam Reference Language, Python, or general pseudocode\n2. For OCR Exam Reference Language specifically:\n   - Verify syntax matches the specification\n   - Check for proper use of operators and built-in functions\n   - Ensure variable assignments follow the format\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nIMPORTANT MARKING REQUIREMENTS:\n- The increment operation must be explicitly present in the code\n- The operation must overwrite the original value of 'score'\n\nMARKING CRITERIA (1 mark total):\n1.1 Variable increment: Must correctly increment the score variable by one and store the result back in score\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+  "initialCode": "# Your code here",
+  "markingPoints": [
+    {
+      "id": "1.1",
+      "description": "Correctly increments the score variable by one",
+      "marks": 1,
+      "required": ["score = score + 1", "score += 1", "score++", "score := score + 1"],
+      "scope": "any"
+    }
+  ],
+  "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: Write pseudocode to increment the value held in the variable score by one.\n\nMarks: 1 mark total\n\nMarking Instructions:\n1. Check the Answer:\n   • Verify if the student's answer correctly increments the value of the variable 'score' by one\n   • Acceptable answers include:\n     - score = score + 1\n     - score += 1\n     - score++\n   • Allow other logically correct answers that result in score increasing by one and being overwritten\n   • Accept valid structured English answers that refer to score increasing and overwriting the existing value by one, e.g., \"score becomes/equals score plus one\"\n   • Do not accept:\n     - score + 1\n     - score = +1\n\n2. Award Marks:\n   • Award 1 mark for correctly incrementing the 'score' variable\n   • Award 0 marks otherwise\n\n3. Important Notes:\n   • The answer must show that the original value is being increased by one\n   • The new value must be stored back in the score variable\n   • Minor syntax variations are acceptable if the logic is correct\n\nFinal Scoring:\nTotal marks: 0 or 1 mark based on the criteria above.\n\nExplanation to Student:\nClearly state whether the mark was awarded and why. Explain what was correct or incorrect in the response.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+},
+{
+  "id": 3,
+  "text": "Booking records at a hotel are stored in a database table called TblBookings. The following SQL statement is written to display all customer bookings that stay more than one night.\n\nSELECT ALL\nFROM TblBookings\nIF Nights < 1 \n\nThe SQL statement is incorrect. Rewrite the SQL statement so that it is correct.",
+  "difficulty": "Moderate",
+  "marks": 4,
+  "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write SQL statements in various formats\n2. For SQL specifically:\n   - Verify syntax matches standard SQL conventions\n   - Check for proper use of clauses (SELECT, FROM, WHERE)\n   - Validate correct usage of operators\n   - Ensure table and field names match the specification\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nIMPORTANT MARKING REQUIREMENTS:\n- Each clause must be explicitly present in the correct order\n- The WHERE clause must replace the incorrect IF clause\n- The condition must correctly filter for stays longer than one night\n- For the SELECT clause (1.1), ONLY award the mark if either:\n  * The statement uses 'SELECT *', OR\n  * The statement includes ALL required fields: FirstName, Surname, Nights, Room, StayComplete\n- Do NOT award the SELECT clause mark for partial field selection\n\nMARKING CRITERIA (1 mark each, no partial marks):\n1.1 SELECT clause: Must use either SELECT * OR list ALL fields (FirstName, Surname, Nights, Room, StayComplete)\n1.2 FROM clause: Must correctly reference TblBookings\n1.3 WHERE keyword: Must use WHERE instead of IF\n1.4 Condition: Must correctly filter for Nights > 1\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1 through 1.4),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+  "initialCode": "SELECT ALL\nFROM TblBookings\nIF Nights < 1",
+  "markingPoints": [
+    {
+      "id": "1.1",
+      "description": "Correct SELECT clause",
+      "marks": 1,
+      "required": ["SELECT *"],
+      "alternatives": [
+        ["SELECT", "FirstName", "Surname", "Nights", "Room", "StayComplete"]
+      ],
+      "scope": "start"
+    },
+    {
+      "id": "1.2",
+      "description": "Correct FROM clause",
+      "marks": 1,
+      "required": ["FROM TblBookings", "from TblBookings", "From TblBookings  "],
+      "scope": "middle"
+    },
+    {
+      "id": "1.3",
+      "description": "Uses WHERE instead of IF",
+      "marks": 1,
+      "required": ["WHERE", "where", "Where"],
+      "scope": "end"
+    },
+    {
+      "id": "1.4",
+      "description": "Correct condition for nights",
+      "marks": 1,
+      "required": ["Nights > 1", "Nights >= 2"],
+      "scope": "end"
+    }
+  ],
+  "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: Booking records at a hotel are stored in a database table called TblBookings. The following SQL statement is written to display all customer bookings that stay more than one night:\n\nSELECT ALL FROM TblBookings IF Nights < 1\n\nThe SQL statement is incorrect. Rewrite the SQL statement so that it is correct.\n\nMarks: 4 marks total\n\nMarking Instructions:\n1. Check the Answer:\n   • Verify if the student's SQL statement correctly selects bookings that stay more than one night\n   Award marks as follows:\n   • 1 mark for correct SELECT clause:\n     - SELECT FirstName, Surname, Nights, Room, StayComplete\n     - Or SELECT *\n   • 1 mark for correct FROM clause:\n     - FROM TblBookings\n   • 1 mark for using WHERE (instead of IF):\n     - WHERE\n   • 1 mark for correct condition:\n     - Nights > 1\n     - Or Nights >= 2\n     - Or Nights BETWEEN 2 AND 5\n\n2. Critical Marking Notes:\n   • For the SELECT clause, the order of fields is not important, but all fields must be shown and separated by commas if listing them individually\n   • Ignore capitalization and spacing\n   • Spelling must be correct\n   • Ignore quotes around numeric values or field/table names\n   • Allow other logically valid SQL statements\n   • Ignore reference to stayComplete or other valid SQL code that would not affect output\n   • Maximum 3 marks if the clauses are in the wrong order or if the statement includes any extra invalid code\n\nFinal Scoring:\nTotal marks: 0 to 4 marks based on the criteria above.\n\nExplanation to Student:\nClearly state how many marks were awarded and why. Explain what was implemented correctly and what was incorrect if full marks were not given.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+},
+{
+  "id": 4,
+  "text": "When a new booking is recorded at a hotel, the details are entered into a program to validate the values. The following criteria are checked:\n\n- firstName and surname are not empty\n- room is either \"basic\" or \"premium\"\n- nights is between 1 and 5 (inclusive)\n\nIf any invalid data is found \"NOT ALLOWED\" is displayed. If all data is valid \"ALLOWED\" is displayed.\n\nComplete the following program to validate the inputs. You must use either:\n- OCR Exam Reference Language, or\n- a high-level programming language that you have studied.",
+  "difficulty": "Moderate",
+  "marks": 5,
+  "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write in OCR Exam Reference Language or other high-level programming languages\n2. For validation code specifically:\n   - Verify proper use of conditional statements\n   - Check for correct implementation of validation rules\n   - Validate proper handling of string and numeric comparisons\n   - Ensure appropriate output messages\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nIMPORTANT MARKING REQUIREMENTS:\n- Each validation check must be explicitly present\n- Output messages must be displayed based on all validation results\n- Do not penalize for lack of type casting or for comparing string inputs directly with numeric values\n- Award marks for logical attempts at validation even if implementation has minor errors\n\nMARKING CRITERIA (1 mark each, no partial marks):\n1.1 Name validation: Must check both firstName and surname are not empty\n1.2 Room validation: Must check room is either \"basic\" or \"premium\"\n1.3 Nights validation: Must check nights is between 1 and 5 inclusive\n1.4 Invalid output: Must output \"NOT ALLOWED\" if any validation fails\n1.5 Valid output: Must output \"ALLOWED\" if all validations pass\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1 through 1.5),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+  "initialCode": "firstName = input(\"Enter a first name\")\nsurname = input(\"Enter a surname\")\nroom = input(\"Enter basic or premium\")\nnights = input(\"Enter between 1 and 5 nights\")\nstayComplete = False",
+  "markingPoints": [
+    {
+      "id": "1.1",
+      "description": "Checks that both firstName and surname are not empty",
+      "marks": 1,
+      "required": ["firstName != \"\"", "surname != \"\"", "firstName.length", "surname.length", "NOT firstName == \"\""],
+      "scope": "validation"
+    },
+    {
+      "id": "1.2",
+      "description": "Checks that room is either \"basic\" or \"premium\"",
+      "marks": 1,
+      "required": ["room == \"basic\"", "room == \"premium\"", "OR"],
+      "scope": "validation"
+    },
+    {
+      "id": "1.3",
+      "description": "Checks that nights is between 1 and 5 inclusive",
+      "marks": 1,
+      "required": ["nights >= 1", "nights <= 5", "BETWEEN", "AND"],
+      "scope": "validation"
+    },
+    {
+      "id": "1.4",
+      "description": "Outputs NOT ALLOWED if any validation fails",
+      "marks": 1,
+      "required": ["print(\"NOT ALLOWED\")", "output \"NOT ALLOWED\""],
+      "scope": "output"
+    },
+    {
+      "id": "1.5",
+      "description": "Outputs ALLOWED if all validations pass",
+      "marks": 1,
+      "required": ["print(\"ALLOWED\")", "output \"ALLOWED\""],
+      "scope": "output"
+    }
+  ],
+  "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: When a new booking is recorded at a hotel, the details are entered into a program to validate the values. The following criteria are checked:\n- firstName and surname are not empty\n- room is either \"basic\" or \"premium\"\n- nights is between 1 and 5 (inclusive)\n\nIf any invalid data is found \"NOT ALLOWED\" is displayed. If all data is valid \"ALLOWED\" is displayed.\n\nComplete the following program to validate the inputs. You must use either OCR Exam Reference Language or a high-level programming language that you have studied.\n\nStarting code:\nfirstName = input(\"Enter a first name\")\nsurname = input(\"Enter a surname\")\nroom = input(\"Enter basic or premium\")\nnights = input(\"Enter between 1 and 5 nights\")\nstayComplete = False\n\nMarks: 5 marks total\n\nMarking Instructions:\n1. Check the Answer:\n   • 1 mark for checking that both firstName and surname are not empty\n   • 1 mark for checking that room is either \"basic\" or \"premium\"\n   • 1 mark for checking that nights is between 1 and 5 (inclusive)\n   • 1 mark for outputting \"NOT ALLOWED\" if any of the 3 checks are invalid\n   • 1 mark for outputting \"ALLOWED\" only if all three checks are valid\n\n2. Critical Marking Notes:\n   • For the nights check, award the mark if the logic attempts to check for values between 1 and 5\n   • Award output marks if code attempts to check all conditions and determine final output\n   • Do not penalize for lack of type casting or string/numeric comparisons\n   • Ignore capitalization and minor syntax errors if intent is clear\n   • Boolean flags to track validity are acceptable\n   • Do not penalize for logical errors if overall structure is correct\n\nFinal Scoring:\nTotal marks: 0 to 5 marks based on the criteria above.\n\nExplanation to Student:\nClearly state how many marks were awarded and why. Explain what was implemented correctly and what was incorrect if full marks were not given.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+},
+{
+  "id": 5,
+  "text": "SecureTech's alarm system maintains a log of all sensor activations, referred to as events. Each event is recorded in a database table named 'sensor_events'. SecureTech needs to calculate the total duration of sensor activations for a given date.\n\nThe data from the 'sensor_events' database table is imported into a program written in a high-level programming language. The program stores this data in a two-dimensional (2D) string array named 'eventLog'.\n\nWrite a program that performs the following tasks:\n- Prompts the user to enter a date\n- Calculates the total duration (in seconds) that sensors were activated on the input date, using the data stored in the 'eventLog' array\n- Displays the result in a formatted message that includes both the date and total. For example: \"On 11-08-2023, sensors were active for a total of 37 seconds.\" (Note: The exact format is not required, any clear message showing the date and total is acceptable)\n\nYou must use either:\n- OCR Exam Reference Language, or\n- A high-level programming language you have studied.",
+  "image": {
+    "src": "/images/sensor.png",
+    "alt": "Table showing sensor events",
+    "width": 500,
+    "height": 300
+  },
+  "difficulty": "Hard",
+  "marks": 6,
+  "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write in OCR Exam Reference Language or other high-level programming languages\n2. For array manipulation specifically:\n   - Verify proper iteration through array elements\n   - Check for correct access of 2D array elements\n   - Validate proper comparison and calculation logic\n   - Ensure appropriate output formatting\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nIMPORTANT MARKING REQUIREMENTS:\n- Each program element must be explicitly present and syntactically correct\n- Array access must show understanding of 2D structure\n- Loop syntax must be complete and valid\n- Output must include both date and calculated total\n- Accept either loop-based or manual array access\n- IMPORTANT: For output formatting (1.6):\n  * Ignore all spacing issues\n  * Accept ANY message format that includes both the date and total\n  * Do not require specific wording or formatting\n  * Award full marks if both pieces of information are present\n\nMARKING CRITERIA (1 mark each, no partial marks):\n1.1 Input handling: Must input date and store in variable\n1.2 Array access: Must have syntactically correct loop or manual array access\n1.3 Selection structure: Must attempt appropriate selection construct\n1.4 Date comparison: Must compare input date with array dates\n1.5 Duration calculation: Must add durations for matching dates\n1.6 Output formatting: Must output total and date in any clear format\n\nSYNTAX REQUIREMENTS:\n- Loops must have complete bounds (e.g., 'length - 1' not just 'length -')\n- Array indices must be properly specified\n- Type casting must use correct OCR Reference Language functions (Int not int)\n- Selection structures must use correct keywords (then, endif)\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1 through 1.6),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+  "initialCode": "",
+  "markingPoints": [
+    {
+      "id": "1.1",
+      "description": "Input date and store in variable",
+      "marks": 1,
+      "required": ["input", "INPUT", "= input"],
+      "scope": "input"
+    },
+    {
+      "id": "1.2",
+      "description": "Access all events in array",
+      "marks": 1,
+      "required": ["for", "while", "eventLog[", "array["],
+      "scope": "array_access"
+    },
+    {
+      "id": "1.3",
+      "description": "Attempt at selection",
+      "marks": 1,
+      "required": ["if", "IF", "CASE", "switch"],
+      "scope": "selection"
+    },
+    {
+      "id": "1.4",
+      "description": "Compare date input against date in array",
+      "marks": 1,
+      "required": ["==", "=", "equals", "EQUALS"],
+      "scope": "comparison"
+    },
+    {
+      "id": "1.5",
+      "description": "Adding length from array to total if dates match",
+      "marks": 1,
+      "required": ["+=", "= total + ", "+ length", "+ duration"],
+      "scope": "calculation"
+    },
+    {
+      "id": "1.6",
+      "description": "Output total and date in any clear format",
+      "marks": 1,
+      "required": [
+        ["print", "total"],
+        ["print", "date"]
+      ],
+      "scope": "output",
+      "feedback": "Award mark if code attempts to output both the total duration and date in any format",
+      "alternatives": [
+        ["PRINT", "OUTPUT"],
+        ["output", "OUTPUT"]
+      ]
+    }
+  ],
+  "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: SecureTech's alarm system maintains a log of all sensor activations, referred to as events. Each event is recorded in a database table named 'sensor_events'. SecureTech needs to calculate the total duration of sensor activations for a given date.\n\nThe data from the 'sensor_events' database table is imported into a program written in a high-level programming language. The program stores this data in a two-dimensional (2D) string array named 'eventLog'.\n\nWrite a program that performs the following tasks:\n- Prompts the user to enter a date\n- Calculates the total duration (in seconds) that sensors were activated on the input date, using the data stored in the 'eventLog' array\n- Displays the result in a formatted message that includes both the date and total. For example: \"On 11-08-2023, sensors were active for a total of 37 seconds.\" (Note: The exact format is not required, any clear message showing the date and total is acceptable)\n\nYou must use either OCR Exam Reference Language or a high-level programming language you have studied.\n\nMarks: 6 marks total\n\nMarking Instructions:\n1. Check the Answer for the following elements:\n   • Input date and store in variable / use directly (1 mark)\n   • Access all events in array / loop for each event in array (1 mark)\n   • Attempt at selection (1 mark)\n   • Compare date input against date in array (element 0) (1 mark)\n   • Adding length (element 3) from array to the total if dates match (1 mark)\n   • Outputting total and date in any clear format (1 mark)\n\n2. Critical Marking Notes:\n   • Accept either iteration through each event or manually repeating code to access each event\n   • Allow reference to events (table given) or arrayEvents (2D array) if used consistently\n   • Accept any suitable looping structure, allowing for off-by-one errors\n   • Accept array references in either column-major or row-major order\n   • Output can be either once at the end or on every iteration\n   • Only award the output mark if an attempt is made to calculate the total\n   • Do not penalize for capitalization, minor misspellings, or formatting differences in output\n\nFinal Scoring:\nTotal marks: 0 to 6 marks based on the criteria above.\n\nExplanation to Student:\nClearly state how many marks were awarded and why. Explain what was implemented correctly and what was incorrect if full marks were not given.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+},
+{
+  "id": 6,
+  "text": "A shop gives customers a discount based on how much they spend:\n- For purchases over £50, customers get a £5 discount\n- For purchases over £100, customers get a £15 discount\n\nWrite a program that:\n1. Takes the original price as input\n2. Calculates and applies any discount\n3. Outputs the final price to pay\n\nYou must use either:\n- OCR Exam Reference Language, or\n- A high-level programming language you have studied.",
+  "difficulty": "Moderate",
+  "marks": 3,
+  "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write in OCR Exam Reference Language or other high-level programming languages\n2. For calculation code specifically:\n   - Verify proper use of conditional statements\n   - Check for correct calculation logic\n   - Validate proper input handling\n   - Ensure appropriate output formatting\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nIMPORTANT MARKING REQUIREMENTS:\n- Input must be stored and used in calculations\n- Conditions must check correct price thresholds\n- Final price must be calculated and displayed\n\nMARKING CRITERIA (1 mark each, no partial marks):\n1.1 Input handling: Must input and store original price\n1.2 Discount logic: Must correctly check price thresholds and select appropriate discount\n1.3 Output: Must calculate and display final price after any discount\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1 through 1.3),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+  "initialCode": "",
+  "markingPoints": [
+    {
+      "id": "1.1",
+      "description": "Takes original price as input",
+      "marks": 1,
+      "required": ["input", "INPUT", "= input"],
+      "scope": "input"
+    },
+    {
+      "id": "1.2",
+      "description": "Correctly determines appropriate discount",
+      "marks": 1,
+      "required": ["if", "IF", "elseif", "ELSE", ">= 100", ">= 50", "> 100", "> 50"],
+      "scope": "calculation"
+    },
+    {
+      "id": "1.3",
+      "description": "Calculates and outputs final price",
+      "marks": 1,
+      "required": ["print", "PRINT", "output", "OUTPUT"],
+      "scope": "output"
+    }
+  ],
+  "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: A shop gives customers a discount based on how much they spend:\n- For purchases over £50, customers get a £5 discount\n- For purchases over £100, customers get a £15 discount\n\nWrite a program that:\n1. Takes the original price as input\n2. Calculates and applies any discount\n3. Outputs the final price to pay\n\nYou must use either OCR Exam Reference Language or a high-level programming language you have studied.\n\nMarks: 3 marks total\n\nMarking Instructions:\n1. Check the Answer:\n   • 1 mark for correctly taking and storing the original price as input\n   • 1 mark for checking price thresholds and determining correct discount:\n     - Must check both £50 and £100 thresholds\n     - Must apply correct discount amount (£5 or £15)\n   • 1 mark for calculating and displaying final price after any discount\n\n2. Critical Marking Notes:\n   • Accept any reasonable input prompt\n   • Allow either if-else or nested if structures\n   • Accept any clear price/discount variable names\n   • Ignore currency symbols in output\n   • Do not penalize for lack of data type conversion\n   • Accept any clear output format that shows final price\n   • Allow for checking thresholds in any order if logic is correct\n\nFinal Scoring:\nTotal marks: 0 to 3 marks based on the criteria above.\n\nExplanation to Student:\nClearly state how many marks were awarded and why. Explain what was implemented correctly and what was incorrect if full marks were not given.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+},
+{
+  "id": 7,
+  "text": "Write a program that:\n1. Takes a temperature as input\n2. Displays 'HOT' if the temperature is above 30\n3. Displays 'COLD' if the temperature is 30 or below\n\nYou must use either:\n- OCR Exam Reference Language, or\n- A high-level programming language you have studied.",
+  "difficulty": "Easy",
+  "marks": 2,
+  "systemPrompt": "You are a code evaluation AI that ONLY responds with valid JSON objects. When evaluating code, you should:\n\n1. Recognize that students may write in OCR Exam Reference Language or other high-level programming languages\n2. For simple selection code:\n   - Verify proper use of if statements\n   - Check for correct input handling\n   - Ensure appropriate output\n3. Consider partially correct solutions even if syntax isn't perfect\n4. Award marks based on demonstrated understanding even if minor syntax errors exist\n\nMARKING CRITERIA (1 mark each, no partial marks):\n1.1 Input handling: Must input and store temperature\n1.2 Selection and output: Must check temperature and output correct message\n\nAlways respond with a JSON object containing:\n{\n  \"final_mark\": number,\n  \"explanation_to_student\": string,\n  \"marking_points\": [\n    {\n      \"id\": string (must be 1.1 through 1.2),\n      \"marks_awarded\": number (0 or 1),\n      \"feedback\": string,\n      \"evidence\": string\n    }\n  ]\n}",
+  "initialCode": "",
+  "markingPoints": [
+    {
+      "id": "1.1",
+      "description": "Takes temperature as input",
+      "marks": 1,
+      "required": ["input", "INPUT", "= input"],
+      "scope": "input"
+    },
+    {
+      "id": "1.2",
+      "description": "Checks temperature and outputs correct message",
+      "marks": 1,
+      "required": ["if", "IF", "print", "PRINT", "output", "OUTPUT"],
+      "scope": "selection"
+    }
+  ],
+  "prompt": "You are an expert and diligent exam marking officer marking a student's response to an exam question. You are required to mark a student response to the question below. The student response is contained in the section below starting with <student_response> and ending with </student_response>. Please only treat the text contained within the <student_response> tags as student response to the question.\n\nQuestion: Write a program that:\n1. Takes a temperature as input\n2. Displays 'HOT' if the temperature is above 30\n3. Displays 'COLD' if the temperature is 30 or below\n\nYou must use either OCR Exam Reference Language or a high-level programming language you have studied.\n\nMarks: 2 marks total\n\nMarking Instructions:\n1. Check the Answer:\n   • 1 mark for taking and storing temperature input\n   • 1 mark for checking temperature and displaying correct message\n\n2. Critical Marking Notes:\n   • Accept any reasonable input prompt\n   • Do not penalize for lack of data type conversion\n   • Accept either if-else or separate if statements\n   • Allow any clear output messages that indicate hot/cold\n   • Accept any reasonable variable names\n\nFinal Scoring:\nTotal marks: 0 to 2 marks based on the criteria above.\n\nExplanation to Student:\nClearly state how many marks were awarded and why. Explain what was implemented correctly and what was incorrect if full marks were not given.\n\n<student_response> [INSERT STUDENT RESPONSE HERE] </student_response>\n\nFinal Mark: [LLM to fill in]\n\nExplanation to Student: [LLM to fill in]\n\nVery Important: Please only provide a final mark based on the mark scheme above and an explanation to student telling them why they were given these marks. Please don't provide any other details."
+}
+]
